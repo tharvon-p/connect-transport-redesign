@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ภาพการทำงานของเรา - Connect Transport</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo-container">
+                <img src="images/logo.png" alt="Logo" class="logo-img" onerror="this.style.display='none'">
+                <div class="brand-name">Connect<br><span>Transport</span></div>
+            </div>
+            <ul class="nav-links">
+	<li><a href="index.html">Home</a></li>
+	<li><a href="services.html">Services</a></li>
+	<li><a href="standard.html">Standard</a></li>
+	<li><a href="gallery.html" class="active">Gallery</a></li>
+	<li><a href="news.html">News</a></li>
+	<li><a href="about.html">About Us</a></li>
+	<li><a href="contact.html" class="btn-contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="page-header">
+        <h1>Our Gallery</h1>
+        <p>ภาพความประทับใจและการทำงานของเรา</p>
+    </div>
+
+    <section class="container">
+        <div class="section-title">
+      	<h2>ผลงานของเรา</h2>
+    	<div class="line"></div>
+    	<p style="color: #666; margin-top: 10px;">(คลิกที่รูปภาพเพื่อดูขนาดใหญ่)</p>
+       </div>
+
+        <div class="grid-3">
+            <div class="card gallery-card">
+                <img src="images/gallery-1.jpg" class="card-img" alt="ภาพผลงาน 1" onclick="openModal(this)">
+            </div>
+            <div class="card gallery-card">
+                <img src="images/gallery-2.jpg" class="card-img" alt="ภาพผลงาน 2" onclick="openModal(this)">
+            </div>
+            <div class="card gallery-card">
+                <img src="images/gallery-3.jpg" class="card-img" alt="ภาพผลงาน 3" onclick="openModal(this)">
+            </div>
+            <div class="card gallery-card">
+                <img src="images/gallery-4.jpg" class="card-img" alt="ภาพผลงาน 4" onclick="openModal(this)">
+            </div>
+            <div class="card gallery-card">
+                <img src="images/gallery-5.jpg" class="card-img" alt="ภาพผลงาน 5" onclick="openModal(this)">
+            </div>
+            <div class="card gallery-card">
+                <img src="images/gallery-6.jpg" class="card-img" alt="ภาพผลงาน 6" onclick="openModal(this)">
+            </div>
+            <div class="card gallery-card">
+                <img src="images/gallery-7.jpg" class="card-img" alt="ภาพผลงาน 7" onclick="openModal(this)">
+            </div>
+            <div class="card gallery-card">
+                <img src="images/gallery-8.jpg" class="card-img" alt="ภาพผลงาน 8" onclick="openModal(this)">
+            </div>
+            <div class="card gallery-card">
+                <img src="images/gallery-9.jpg" class="card-img" alt="ภาพผลงาน 9" onclick="openModal(this)">
+            </div>
+            <div class="card gallery-card">
+                <img src="images/gallery-10.jpg" class="card-img" alt="ภาพผลงาน 10" onclick="openModal(this)">
+            </div>
+        </div>
+    </section>
+
+    <div id="myModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="img01">
+    </div>
+
+    <footer><div class="footer-bottom"><p>© 2025 Connect Transport Co., Ltd.</p></div></footer>
+
+    <script>
+        // ฟังก์ชันเปิด Modal
+        function openModal(element) {
+            var modal = document.getElementById("myModal");
+            var modalImg = document.getElementById("img01");
+            modal.style.display = "block";
+            modalImg.src = element.src; // เอารูปที่คลิก มาใส่ใน Modal
+        }
+
+        // ฟังก์ชันปิด Modal
+        function closeModal() {
+            document.getElementById("myModal").style.display = "none";
+        }
+
+        // คลิกพื้นที่ว่างๆ สีดำ เพื่อปิดก็ได้
+        var modal = document.getElementById("myModal");
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
