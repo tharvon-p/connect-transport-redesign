@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="th">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +8,15 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+
 <body>
+    <div class="news-ticker-container">
+        <div class="ticker-wrap">
+            <div class="ticker-item" id="tickerContent">
+                Loading News... </div>
+        </div>
+    </div>
+
     <header>
         <nav>
             <div class="logo-container">
@@ -39,29 +48,61 @@
 
         <div class="about-content">
             <div>
-                <img src="images/about.jpg" style="width:100%; border-radius:10px; box-shadow:var(--shadow); object-fit: cover; min-height: 400px;" alt="About Connect Transport" onerror="this.src='https://placehold.co/800x600/004aad/FFF?text=Office+Building'">
+                <img src="images/about.jpg"
+                    style="width:100%; border-radius:10px; box-shadow:var(--shadow); object-fit: cover; min-height: 400px;"
+                    alt="About Connect Transport"
+                    onerror="this.src='https://placehold.co/800x600/004aad/FFF?text=Office+Building'">
             </div>
-            
+
             <div>
-                <h3 style="color:var(--primary); font-size: 1.5rem; margin-bottom: 1rem;">บริษัท คอนเนค ทรานสปอร์ต จำกัด</h3>
+                <h3 style="color:var(--primary); font-size: 1.5rem; margin-bottom: 1rem;">บริษัท คอนเนค ทรานสปอร์ต จำกัด
+                </h3>
                 <p style="text-align: justify;">
-                    ให้บริการขนส่งตู้สินค้า ก่อตั้งเมื่อ พ.ศ 2557 โดยทีมงาน ซึ่งมีประสบการณ์ด้าน Logistics กว่า 20 ปี โดยมุ่งเน้นความพึงพอใจของผู้ใช้บริการเป็นสำคัญ
+                    ให้บริการขนส่งตู้สินค้า ก่อตั้งเมื่อ พ.ศ 2557 โดยทีมงาน ซึ่งมีประสบการณ์ด้าน Logistics กว่า 20 ปี
+                    โดยมุ่งเน้นความพึงพอใจของผู้ใช้บริการเป็นสำคัญ
                 </p>
                 <br>
                 <p style="text-align: justify;">
-                    โดยบริษัทฯ มีระบบการบริหารจัดการที่ทันสมัยและมีประสิทธิภาพ เน้นการบริการที่มีคุณภาพ ตรงเวลา สินค้าปลอดภัย พนักงานขับรถสุภาพและซื่อสัตย์ รถหัวลากที่มีประสิทธิภาพและสมรรถนะสูงให้บริการ พร้อมพนักงานขับรถที่มีประสบการณ์
+                    โดยบริษัทฯ มีระบบการบริหารจัดการที่ทันสมัยและมีประสิทธิภาพ เน้นการบริการที่มีคุณภาพ ตรงเวลา
+                    สินค้าปลอดภัย พนักงานขับรถสุภาพและซื่อสัตย์ รถหัวลากที่มีประสิทธิภาพและสมรรถนะสูงให้บริการ
+                    พร้อมพนักงานขับรถที่มีประสบการณ์
                 </p>
-                
+
                 <div class="line" style="margin: 2rem 0; width: 100%; opacity: 0.3;"></div>
 
                 <h3 style="color:var(--secondary); font-size:1.3rem; margin-bottom: 1rem;">นโยบายคุณภาพของเรา</h3>
                 <p style="text-align: justify;">
-                    บริษัท คอนเนค ทรานสปอร์ต จำกัด มุ่งมั่นที่จะให้บริการที่ดี รับผิดชอบ ตรงเวลา ซื่อสัตย์ และรักษาความสัมพันธ์ที่ดีต่อลูกค้า เพื่อสร้างความพึงพอใจให้ลูกค้า โดยการให้พนักงานทุกระดับมีส่วนร่วมในการปรับปรุงการทำงานอย่างต่อเนื่อง เพื่อลดการสูญเสียต่างๆ และให้ความมั่นใจต่อพนักงานในการดูแลพนักงานให้มีความก้าวหน้าและมั่นคงในชีวิต
+                    บริษัท คอนเนค ทรานสปอร์ต จำกัด มุ่งมั่นที่จะให้บริการที่ดี รับผิดชอบ ตรงเวลา ซื่อสัตย์
+                    และรักษาความสัมพันธ์ที่ดีต่อลูกค้า เพื่อสร้างความพึงพอใจให้ลูกค้า
+                    โดยการให้พนักงานทุกระดับมีส่วนร่วมในการปรับปรุงการทำงานอย่างต่อเนื่อง เพื่อลดการสูญเสียต่างๆ
+                    และให้ความมั่นใจต่อพนักงานในการดูแลพนักงานให้มีความก้าวหน้าและมั่นคงในชีวิต
                 </p>
             </div>
         </div>
     </section>
 
-    <footer><div class="footer-bottom"><p>© 2025 Connect Transport Co., Ltd.</p></div></footer>
+    <footer>
+        <div class="footer-bottom">
+            <p>© 2025 Connect Transport Co., Ltd.</p>
+        </div>
+    </footer>
+    <script>
+        const scriptURL_News = 'https://script.google.com/macros/s/AKfycbwWPGPChwpaD2WoQRJrB5og0EnPQgESPGY4i_hj09DFPPY3-fU8id6IhfHqo9O4IRTSVw/exec';
+
+        function fetchNews() {
+            fetch(scriptURL_News)
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('tickerContent').innerText = data.news;
+                })
+                .catch(error => {
+                    document.getElementById('tickerContent').innerText = "ยินดีต้อนรับสู่ Connect Transport";
+                });
+        }
+
+        // เรียกใช้งานฟังก์ชัน
+        fetchNews();
+    </script>
 </body>
+
 </html>

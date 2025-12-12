@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="th">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,8 +8,16 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+
 <body>
-    
+
+    <div class="news-ticker-container">
+        <div class="ticker-wrap">
+            <div class="ticker-item" id="tickerContent">
+                Loading News... </div>
+        </div>
+    </div>
+
     <header>
         <nav>
             <div class="logo-container">
@@ -33,7 +42,7 @@
     </div>
 
     <section class="container">
-        
+
         <div class="section-title">
             <h2>มาตรฐานของเรา</h2>
             <div class="line"></div>
@@ -45,52 +54,86 @@
                     วางใจและมั่นใจ<br>ในการให้บริการของเรา
                 </h2>
                 <div class="line" style="margin: 0 0 2rem 0; width: 60px;"></div>
-                
+
                 <ul style="list-style: none;">
                     <li style="margin-bottom: 1.5rem; display: flex; align-items: start; gap: 15px;">
-                        <i class="fas fa-check-circle" style="color:var(--secondary); font-size: 1.4rem; margin-top: 3px;"></i>
+                        <i class="fas fa-check-circle"
+                            style="color:var(--secondary); font-size: 1.4rem; margin-top: 3px;"></i>
                         <div>
                             <strong>คุณภาพในการขนส่งสินค้าได้มาตรฐาน</strong>
-                            <p style="color: #666; margin-top: 5px;">เรารักษามาตรฐานการบริการเพื่อความพึงพอใจสูงสุดของลูกค้า</p>
+                            <p style="color: #666; margin-top: 5px;">
+                                เรารักษามาตรฐานการบริการเพื่อความพึงพอใจสูงสุดของลูกค้า</p>
                         </div>
                     </li>
                     <li style="margin-bottom: 1.5rem; display: flex; align-items: start; gap: 15px;">
                         <i class="fas fa-clock" style="color:var(--secondary); font-size: 1.4rem; margin-top: 3px;"></i>
                         <div>
                             <strong>รับ-ส่งสินค้า ตรงเวลา ปลอดภัย</strong>
-                            <p style="color: #666; margin-top: 5px;">สินค้าถึงมือผู้รับอย่างปลอดภัย พร้อมประกันภัยรถและสินค้าทุกประเภท</p>
+                            <p style="color: #666; margin-top: 5px;">สินค้าถึงมือผู้รับอย่างปลอดภัย
+                                พร้อมประกันภัยรถและสินค้าทุกประเภท</p>
                         </div>
                     </li>
                     <li style="margin-bottom: 1.5rem; display: flex; align-items: start; gap: 15px;">
-                        <i class="fas fa-truck-moving" style="color:var(--secondary); font-size: 1.4rem; margin-top: 3px;"></i>
+                        <i class="fas fa-truck-moving"
+                            style="color:var(--secondary); font-size: 1.4rem; margin-top: 3px;"></i>
                         <div>
                             <strong>รถหัวลากเทคโนโลยีทันสมัย</strong>
-                            <p style="color: #666; margin-top: 5px;">ใช้รถที่มีสมรรถนะดีเยี่ยม และมีความปลอดภัยสูงในการขับขี่</p>
+                            <p style="color: #666; margin-top: 5px;">ใช้รถที่มีสมรรถนะดีเยี่ยม
+                                และมีความปลอดภัยสูงในการขับขี่</p>
                         </div>
                     </li>
                     <li style="margin-bottom: 1.5rem; display: flex; align-items: start; gap: 15px;">
-                        <i class="fas fa-user-shield" style="color:var(--secondary); font-size: 1.4rem; margin-top: 3px;"></i>
+                        <i class="fas fa-user-shield"
+                            style="color:var(--secondary); font-size: 1.4rem; margin-top: 3px;"></i>
                         <div>
                             <strong>พนักงานขับรถมืออาชีพ</strong>
-                            <p style="color: #666; margin-top: 5px;">มีประสบการณ์ ซื่อสัตย์ ให้บริการสุภาพ ผ่านการอบรมการขับขี่ปลอดภัยและกฎหมายจราจรอย่างสม่ำเสมอ</p>
+                            <p style="color: #666; margin-top: 5px;">มีประสบการณ์ ซื่อสัตย์ ให้บริการสุภาพ
+                                ผ่านการอบรมการขับขี่ปลอดภัยและกฎหมายจราจรอย่างสม่ำเสมอ</p>
                         </div>
                     </li>
                     <li style="margin-bottom: 1.5rem; display: flex; align-items: start; gap: 15px;">
-                        <i class="fas fa-satellite-dish" style="color:var(--secondary); font-size: 1.4rem; margin-top: 3px;"></i>
+                        <i class="fas fa-satellite-dish"
+                            style="color:var(--secondary); font-size: 1.4rem; margin-top: 3px;"></i>
                         <div>
                             <strong>ระบบติดตาม GPS Tracking Real-time</strong>
-                            <p style="color: #666; margin-top: 5px;">ควบคุมดูแลสินค้าได้ตลอดเวลา ทราบตำแหน่งปัจจุบัน สถานะ และความเร็วของรถทันที</p>
+                            <p style="color: #666; margin-top: 5px;">ควบคุมดูแลสินค้าได้ตลอดเวลา ทราบตำแหน่งปัจจุบัน
+                                สถานะ และความเร็วของรถทันที</p>
                         </div>
                     </li>
                 </ul>
             </div>
 
             <div>
-                <img src="images/standard.jpg" style="width:100%; border-radius:10px; box-shadow:var(--shadow); object-fit: cover; min-height: 500px;" alt="Safety Standard" onerror="this.src='https://placehold.co/800x1000/004aad/FFF?text=Safety+Standard'">
+                <img src="images/standard.jpg"
+                    style="width:100%; border-radius:10px; box-shadow:var(--shadow); object-fit: cover; min-height: 500px;"
+                    alt="Safety Standard"
+                    onerror="this.src='https://placehold.co/800x1000/004aad/FFF?text=Safety+Standard'">
             </div>
         </div>
     </section>
-    
-    <footer><div class="footer-bottom"><p>© 2025 Connect Transport Co., Ltd.</p></div></footer>
+
+    <footer>
+        <div class="footer-bottom">
+            <p>© 2025 Connect Transport Co., Ltd.</p>
+        </div>
+    </footer>
+    <script>
+        const scriptURL_News = 'https://script.google.com/macros/s/AKfycbwWPGPChwpaD2WoQRJrB5og0EnPQgESPGY4i_hj09DFPPY3-fU8id6IhfHqo9O4IRTSVw/exec';
+
+        function fetchNews() {
+            fetch(scriptURL_News)
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('tickerContent').innerText = data.news;
+                })
+                .catch(error => {
+                    document.getElementById('tickerContent').innerText = "ยินดีต้อนรับสู่ Connect Transport";
+                });
+        }
+
+        // เรียกใช้งานฟังก์ชัน
+        fetchNews();
+    </script>
 </body>
+
 </html>

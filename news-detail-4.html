@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="th">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,8 +8,16 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+
 <body>
-    
+
+    <div class="news-ticker-container">
+        <div class="ticker-wrap">
+            <div class="ticker-item" id="tickerContent">
+                Loading News... </div>
+        </div>
+    </div>
+
     <header>
         <nav>
             <div class="logo-container">
@@ -28,7 +37,7 @@
     </header>
 
     <section class="container" style="padding-top: 4rem;">
-        
+
         <a href="news.html" style="color: #666; font-size: 0.9rem; display: inline-block; margin-bottom: 1rem;">
             <i class="fas fa-arrow-left"></i> กลับไปหน้าข่าวสาร
         </a>
@@ -41,44 +50,64 @@
         </p>
 
         <div style="margin-bottom: 2rem;">
-            <img src="images/news-4.jpg" style="width: 100%; max-height: 500px; object-fit: cover; border-radius: 10px;" alt="รถหัวลาก HINO ใหม่" onerror="this.src='https://placehold.co/1000x500/EEE/333?text=Main+News+Image'">
+            <img src="images/news-4.jpg" style="width: 100%; max-height: 500px; object-fit: cover; border-radius: 10px;"
+                alt="รถหัวลาก HINO ใหม่"
+                onerror="this.src='https://placehold.co/1000x500/EEE/333?text=Main+News+Image'">
         </div>
 
         <div style="line-height: 1.8; color: #444; margin-bottom: 3rem;">
             <p style="margin-bottom: 1rem;">
-                <strong>คอนเนค ทรานสปอร์ต</strong> เป็นผู้ให้บริการขนส่งตู้คอนเทนเนอร์ด้วยรถเทรลเลอร์หัวลาก ได้เดินหน้าสั่งซื้อรถหัวลาก HINO ใหม่ รุ่น <strong>FM1AK1B-SHT(S)-MY</strong> จำนวน 4 คัน เพื่อนำมาทดแทนรถที่ปลดระวางและเตรียมความพร้อมรองรับแผนการขยายงานในอนาคต
+                <strong>คอนเนค ทรานสปอร์ต</strong> เป็นผู้ให้บริการขนส่งตู้คอนเทนเนอร์ด้วยรถเทรลเลอร์หัวลาก
+                ได้เดินหน้าสั่งซื้อรถหัวลาก HINO ใหม่ รุ่น <strong>FM1AK1B-SHT(S)-MY</strong> จำนวน 4 คัน
+                เพื่อนำมาทดแทนรถที่ปลดระวางและเตรียมความพร้อมรองรับแผนการขยายงานในอนาคต
             </p>
             <p>
-                โดยรถหัวลาก HINO ใหม่ รุ่น FM1AK1B-SHT(S)-MY หรือรถหัวลากขับเคลื่อน 2 เพลา ขนาด 344 แรงม้า น้ำหนักบรรทุกรวม (GCW) 50.5 ตัน จำนวน 4 คันนี้ ได้ทำการรับมอบเป็นที่เรียบร้อยแล้ว พร้อมให้บริการที่ดีที่สุดแก่ลูกค้าทุกท่านด้วยประสิทธิภาพสูงสุด
+                โดยรถหัวลาก HINO ใหม่ รุ่น FM1AK1B-SHT(S)-MY หรือรถหัวลากขับเคลื่อน 2 เพลา ขนาด 344 แรงม้า
+                น้ำหนักบรรทุกรวม (GCW) 50.5 ตัน จำนวน 4 คันนี้ ได้ทำการรับมอบเป็นที่เรียบร้อยแล้ว
+                พร้อมให้บริการที่ดีที่สุดแก่ลูกค้าทุกท่านด้วยประสิทธิภาพสูงสุด
             </p>
         </div>
 
-        <h3 style="color: var(--primary); border-left: 5px solid var(--secondary); padding-left: 10px; margin-bottom: 1.5rem;">ภาพบรรยากาศเพิ่มเติม</h3>
-        
+        <h3
+            style="color: var(--primary); border-left: 5px solid var(--secondary); padding-left: 10px; margin-bottom: 1.5rem;">
+            ภาพบรรยากาศเพิ่มเติม</h3>
+
         <div class="grid-3">
-            
+
             <div class="card gallery-card" style="border:none; box-shadow:none;">
-                <img src="images/news-4-1.jpg" class="card-img" style="border-radius: 8px; height: 200px;" alt="รูปเพิ่มเติม 1" onclick="openModal(this)" onerror="this.src='https://placehold.co/600x400/DDD/333?text=Photo+1'">
+                <img src="images/news-4-1.jpg" class="card-img" style="border-radius: 8px; height: 200px;"
+                    alt="รูปเพิ่มเติม 1" onclick="openModal(this)"
+                    onerror="this.src='https://placehold.co/600x400/DDD/333?text=Photo+1'">
             </div>
 
             <div class="card gallery-card" style="border:none; box-shadow:none;">
-                <img src="images/news-4-2.jpg" class="card-img" style="border-radius: 8px; height: 200px;" alt="รูปเพิ่มเติม 2" onclick="openModal(this)" onerror="this.src='https://placehold.co/600x400/DDD/333?text=Photo+2'">
+                <img src="images/news-4-2.jpg" class="card-img" style="border-radius: 8px; height: 200px;"
+                    alt="รูปเพิ่มเติม 2" onclick="openModal(this)"
+                    onerror="this.src='https://placehold.co/600x400/DDD/333?text=Photo+2'">
             </div>
 
             <div class="card gallery-card" style="border:none; box-shadow:none;">
-                <img src="images/news-4-3.jpg" class="card-img" style="border-radius: 8px; height: 200px;" alt="รูปเพิ่มเติม 3" onclick="openModal(this)" onerror="this.src='https://placehold.co/600x400/DDD/333?text=Photo+3'">
+                <img src="images/news-4-3.jpg" class="card-img" style="border-radius: 8px; height: 200px;"
+                    alt="รูปเพิ่มเติม 3" onclick="openModal(this)"
+                    onerror="this.src='https://placehold.co/600x400/DDD/333?text=Photo+3'">
             </div>
 
             <div class="card gallery-card" style="border:none; box-shadow:none;">
-                <img src="images/news-4-4.jpg" class="card-img" style="border-radius: 8px; height: 200px;" alt="รูปเพิ่มเติม 4" onclick="openModal(this)" onerror="this.src='https://placehold.co/600x400/DDD/333?text=Photo+4'">
+                <img src="images/news-4-4.jpg" class="card-img" style="border-radius: 8px; height: 200px;"
+                    alt="รูปเพิ่มเติม 4" onclick="openModal(this)"
+                    onerror="this.src='https://placehold.co/600x400/DDD/333?text=Photo+4'">
             </div>
 
             <div class="card gallery-card" style="border:none; box-shadow:none;">
-                <img src="images/news-4-5.jpg" class="card-img" style="border-radius: 8px; height: 200px;" alt="รูปเพิ่มเติม 5" onclick="openModal(this)" onerror="this.src='https://placehold.co/600x400/DDD/333?text=Photo+5'">
+                <img src="images/news-4-5.jpg" class="card-img" style="border-radius: 8px; height: 200px;"
+                    alt="รูปเพิ่มเติม 5" onclick="openModal(this)"
+                    onerror="this.src='https://placehold.co/600x400/DDD/333?text=Photo+5'">
             </div>
 
             <div class="card gallery-card" style="border:none; box-shadow:none;">
-                <img src="images/news-4-6.jpg" class="card-img" style="border-radius: 8px; height: 200px;" alt="รูปเพิ่มเติม 6" onclick="openModal(this)" onerror="this.src='https://placehold.co/600x400/DDD/333?text=Photo+6'">
+                <img src="images/news-4-6.jpg" class="card-img" style="border-radius: 8px; height: 200px;"
+                    alt="รูปเพิ่มเติม 6" onclick="openModal(this)"
+                    onerror="this.src='https://placehold.co/600x400/DDD/333?text=Photo+6'">
             </div>
 
         </div>
@@ -90,7 +119,11 @@
         <img class="modal-content" id="img01">
     </div>
 
-    <footer><div class="footer-bottom"><p>© 2025 Connect Transport Co., Ltd.</p></div></footer>
+    <footer>
+        <div class="footer-bottom">
+            <p>© 2025 Connect Transport Co., Ltd.</p>
+        </div>
+    </footer>
 
     <script>
         function openModal(element) {
@@ -102,12 +135,30 @@
         function closeModal() {
             document.getElementById("myModal").style.display = "none";
         }
-        window.onclick = function(event) {
+        window.onclick = function (event) {
             if (event.target == document.getElementById("myModal")) {
                 closeModal();
             }
         }
     </script>
 
+    <script>
+        const scriptURL_News = 'https://script.google.com/macros/s/AKfycbwWPGPChwpaD2WoQRJrB5og0EnPQgESPGY4i_hj09DFPPY3-fU8id6IhfHqo9O4IRTSVw/exec';
+
+        function fetchNews() {
+            fetch(scriptURL_News)
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('tickerContent').innerText = data.news;
+                })
+                .catch(error => {
+                    document.getElementById('tickerContent').innerText = "ยินดีต้อนรับสู่ Connect Transport";
+                });
+        }
+
+        // เรียกใช้งานฟังก์ชัน
+        fetchNews();
+    </script>
 </body>
+
 </html>

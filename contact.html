@@ -11,6 +11,13 @@
 
 <body>
 
+    <div class="news-ticker-container">
+        <div class="ticker-wrap">
+            <div class="ticker-item" id="tickerContent">
+                Loading News... </div>
+        </div>
+    </div>
+
     <header>
         <nav>
             <div class="logo-container">
@@ -273,6 +280,23 @@
                 closeModal();
             }
         }
+    </script>
+    <script>
+        const scriptURL_News = 'https://script.google.com/macros/s/AKfycbwWPGPChwpaD2WoQRJrB5og0EnPQgESPGY4i_hj09DFPPY3-fU8id6IhfHqo9O4IRTSVw/exec';
+
+        function fetchNews() {
+            fetch(scriptURL_News)
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('tickerContent').innerText = data.news;
+                })
+                .catch(error => {
+                    document.getElementById('tickerContent').innerText = "ยินดีต้อนรับสู่ Connect Transport";
+                });
+        }
+
+        // เรียกใช้งานฟังก์ชัน
+        fetchNews();
     </script>
 </body>
 
